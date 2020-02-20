@@ -16,7 +16,7 @@
         </div>
     @endif
 
-    <form method="POST" action="{{ url("editoriales/{$editorial->id}") }}">
+    <form method="POST" action="{{ url("editorials/{$editorial->id}") }}">
         {{ method_field('PUT') }}
         {{ csrf_field() }}
 

@@ -69,13 +69,11 @@ class EditorialController extends Controller
     {
         $data = request()->validate([
             'name' => 'required',
-            'genre' => 'required',
-            'address' => 'required',          
+            'genre' => 'required',       
             'email' => 'required',
         ],[
             'name.required' => 'El campo nombre es obligatorio',
             'genre.required' => 'El campo genero es obligatorio',
-            'address.required' => 'El campo dirección es obligatorio',
             'email.required' => 'El email es obligatorio',          
         ]);
 

@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
 
         factory(User::class)->create([
             'name' => 'Pablo Vega',
-            'email' => 'duilio@styde.net',
+            'email' => 'prueba@gmail.com',
             'password' => bcrypt('laravel'),
             'profession_id' => $professionId,
             'is_admin' => true,

@@ -1,8 +1,6 @@
 <?php
 
-Route::get('/', function () {
-   return 'Home';
-});
+Route::get('/', 'HomeController@index')->name('home');
 
 // USUARIOS //
 
@@ -24,10 +22,6 @@ Route::put('/usuarios/{user}', 'UserController@update');
 Route::get('/saludo/{name}/{nickname?}', 'WelcomeUserController');
 
 Route::delete('/usuarios/{user}', 'UserController@destroy')->name('users.destroy');
-
-
-
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -68,3 +62,5 @@ Route::get('/editorials/{editorial}/editar', 'EditorialController@edit')->name('
 Route::put('/editorials/{editorial}', 'EditorialController@update');
 
 Route::delete('/editorials/{editorial}', 'EditorialController@destroy')->name('editorials.destroy');
+
+Auth::routes();
